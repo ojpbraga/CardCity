@@ -1,0 +1,156 @@
+*{
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    display: grid;
+    height: 100vh;
+}
+
+#box-degrade{
+    background-image: linear-gradient(90deg, rgba(255,249,27,0.35906862745098034) 0%, rgba(253,29,29,0.3534663865546218) 50%, rgba(5,255,0,0.2190126050420168) 100%);
+    background-size: 200% 100%;
+    animation: animation-gradient 10s 10s infinite alternate;
+}
+@keyframes animation-gradient{
+    0%{
+        background-position-x: 0%;
+    }
+    100%{
+        background-position-x: 100%;
+    }
+}
+#glass_efeito{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba( 255, 255, 255, 0.35 );
+    box-shadow: 0 0px 0px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 12px );
+    -webkit-backdrop-filter: blur( 12px );
+    border-radius: 10px;
+}
+
+#area_login{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* height: 50vh; */
+    width: 60vh;
+    padding: 5rem;
+    background-color: #fff;
+    border-radius: 1rem;
+
+    gap: 2rem;
+
+    justify-content: space-between;
+}
+
+
+#cabecalho_login{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+#cabecalho_login h1{
+    opacity: 60%;
+}
+
+#cabecalho_titulo{
+    font-size: 2rem;
+    opacity: 80%;
+}
+
+
+
+
+
+#logo{
+    height: 4rem;
+}
+
+/* Input */
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+}
+.bloco_input{
+    position: relative;
+}
+.input_usuario{
+    background: none;
+    border: none;
+    border-bottom: 2px solid #e7e7e7;
+    outline: none;
+    /* color: black; */
+    font-size: 1rem;
+    width: 100%;
+}
+.label_input{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    transition: .5s;
+}
+.input_usuario:focus ~ .label_input,
+.input_usuario:valid ~ .label_input{
+    top: -15px;
+    font-size: 0.8rem;
+    color: red;
+}
+
+/* Deixar verde quando estiver correto */
+.input_usuario:focus{
+    border-bottom: 2px solid red;
+}
+
+
+#login_opcoes{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+#login_opcoes a{
+    text-decoration: none;
+    color: crimson;
+    place-self: start;
+}
+
+#entrar{
+    place-self: end;
+    background-color: red;
+    text-decoration: none;
+    color: #fff;
+    padding: .5rem 2.5rem;
+    border-radius: 7px;
+    border: none;
+    transition: .5s;
+
+    /* background: rgb(255,249,27);
+    background: linear-gradient(90deg, rgba(255,249,27,0.35906862745098034) 0%, rgba(253,29,29,0.3534663865546218) 50%, rgba(5,255,0,0.2190126050420168) 100%);
+    display: inline-block;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;  */
+}
+#entrar:hover{
+    background: rgb(255,249,27);
+    background: linear-gradient(90deg, rgba(255,249,27,0.35906862745098034) 0%, rgba(253,29,29,0.3534663865546218) 50%, rgba(5,255,0,0.2190126050420168) 100%);
+    /* display: inline-block;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; */
+}
+
+
+/* 
+    06/21 - Precisa dar uma olhada e ve se precisa organizar o código. Tem um bug do link "Sem acesso a conta" que tá pegando a parte branca tamcbem provavelmente por conta do wisth, talvez um justify=contant center sla resolva
+*/
