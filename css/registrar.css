@@ -12,14 +12,14 @@ body{
     background-size: 200% 100%;
     animation: animation-gradient 10s 10s infinite alternate;
 }
-/* @keyframes animation-gradient{
+@keyframes animation-gradient{
     0%{
         background-position-x: 0%;
     }
     100%{
         background-position-x: 100%;
     }
-} */
+}
 #glass_efeito{
     display: grid;
     align-items: center;
